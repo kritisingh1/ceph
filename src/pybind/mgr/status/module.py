@@ -27,11 +27,11 @@ class Module(MgrModule):
             "perm": "r"
         },
         {
-            "cmd": "mon status"
-                   "name=bucket, type=CephString, req=false",
+            "cmd": "mon status "
+                   "name=bucket,type=CephString,req=false",
             "desc": "Show the status of monitors within a bucket, or all",
             "perm": "r"
-        }
+        },
     ]
 
     (
