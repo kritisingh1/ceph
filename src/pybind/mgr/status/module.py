@@ -26,6 +26,12 @@ class Module(MgrModule):
             "desc": "Show the status of OSDs within a bucket, or all",
             "perm": "r"
         },
+        {
+            "cmd": "mon status"
+                   "name=bucket, type=CephString, req=false",
+            "desc": "Show the status of monitors within a bucket, or all",
+            "perm": "r"
+        }
     ]
 
     (
@@ -293,6 +299,10 @@ class Module(MgrModule):
                                ])
 
         return 0, "", osd_table.get_string()
+
+    def handle_mon_status(self, cmd):
+        mon_table = PrettyTable(['id', 'host',])
+        monmap = self.get("mon_map")
 
     def handle_command(self, cmd):
         self.log.error("handle_command")

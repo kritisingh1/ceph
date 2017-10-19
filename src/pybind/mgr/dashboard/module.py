@@ -476,6 +476,12 @@ class Module(MgrModule):
 
         class Root(EndPoint):
             @cherrypy.expose
+            @cherrypy.tools.json_out()
+            def testing(self):
+                data = global_instance().get("mon_status")
+                return json.loads(data["json"])
+
+            @cherrypy.expose
             def filesystem(self, fs_id):
                 template = env.get_template("filesystem.html")
 
