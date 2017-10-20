@@ -1017,8 +1017,49 @@ class Module(MgrModule):
                     content_data=json.dumps(content_data, indent=2)
                 )
 
+        class MonEndpoint(EndPoint):
+            def _mon(self):
+                mon_status = global_instance().get("mon_status")
+
+            # @cherrypy.expose
+            # def perf(self):
+            #     template = env.get_template("mon_perf.html")
+                # toplevel_data = self.toplevel_data()
+
+                return template.render(
+                    url_prefix = global_instance().url_prefix,
+                    ceph_version=global_instance().version,
+                    path_info='/mon' + cherrypy.request.path_info,
+                )
+
+            @cherrypy.expose
+            @cherrypy.tools.json_out()
+            def perf_data(self):
+                return self._mon(self)
+
+            # @cherrypy.expose
+            # @cherrypy.tools.json_out()
+            # def list_data(self):
+            #     return self._mons_by_server()
+
+            @cherrypy.expose
+            def index(self):
+
+                template = env.get_template("monitors.html")
+
+                # content_data = {
+                #     "mons_by_server": self._mons_by_server()
+                # }
+
+                return template.render(
+                    url_prefix = global_instance().url_prefix,
+                    ceph_version = global_instance().version,
+                    path_info = '/mon' + cherrypy.request.path_info,
+                )
+
         cherrypy.tree.mount(Root(), get_prefixed_url("/"), conf)
         cherrypy.tree.mount(OSDEndpoint(), get_prefixed_url("/osd"), conf)
+        cherrypy.tree.mount(MonEndpoint(), get_prefixed_url("/mon"), conf)
 
         log.info("Starting engine...")
         cherrypy.engine.start()
