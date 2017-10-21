@@ -52,141 +52,187 @@
 
 <section class="content-header">
     <h1>
-        monitor daemons
+        Monitor daemons
     </h1>
 </section>
+<br>
+<br>
 
-<section class="content">
-    <div class="box">
-        <div class="box-body">
+<section class="content" style="position: absolute; top: 10%">
 
-            <table class="table table-condensed table-bordered">
-            <thead>
-            <tr>
-                <th>Election Epoch</th>
-                <th colspan="4">Features</th>
-                <th>Outside Quorum</th>
-                <th>Rank</th>
-                <th>Name</th>
-                <th colspan="10">MonMap</th>
-                <th>State</th>
-                <th>Extra Probe Peers</th>
-                <th colspan="9">Feature Map</th>
-                <th>Quorum</th>
-                <th>Sync Provider</th>
-            </tr>
-            </thead>
-
-           <!--  <tbody rv-each-server="mons_by_server">
-                <tr rv-each-mon="server.1">
-                    <td rv-if="mon.first" rv-rowspan="server.1 | length">{server.0}</td>
-                    <td><a rv-href="mon.url">{mon.id}</a></td>
-                    <td rv-html="mon | colored_up_in"></td>
-                    <td>{mon.stats.numpg}</td>
-                    <td>{mon.stats.stat_bytes_used | dimless_binary} / {mon.stats.stat_bytes | dimless_binary}</td>
-                    <td>{mon.stats.op_out_bytes | dimless_binary}/s <span class="inlinesparkline" rv-html="mon.stats_history.op_out_bytes | sparkline_data"></span></td>
-                    <td>{mon.stats.op_in_bytes | dimless_binary}/s <span class="inlinesparkline" rv-html="mon.stats_history.op_in_bytes | sparkline_data"></span></td>
-                    <td>{mon.stats.op_r | dimless}/s</td>
-                    <td>{mon.stats.op_w | dimless}/s</td>
-                </tr>
-            </tbody> -->
-            <tbody>
-            <tr>
-                <td rowspan="5">3</td>
-                <th>quorum_con</th>
-                <th>quorum_mon</th>
-                <th>required_mon</th>
-                <th>required_con</th>
-                <td rowspan="5">0</td>
-                <td rowspan="5">0</td>
-                <th colspan="2">Features</th>
-                <th>Created</th>
-                <th>Modified</th>
-                <th>Epoch</th>
-                <th colspan="4">Monitors</th>
-                <th>FSID</th>
-                <th>Leader</th>
-                <th>None</th>
-                <th colspan="3">Client</th>
-                <th colspan="3">Mon</th>
-                <th colspan="3">OSD</th>
-                <td rowspan="5">0</td>
-                <td rowspan="5">None</td>
-                <td rowspan="5">a</td>
-
-            </tr>
-
-            <tr>
-                <td rowspan="4">2305244844800671739</td>
-                <td>Kraken</td>
-                <td>Kraken</td>
-                <td rowspan="4">153140804420911104</td>
-                <th>Optional</th>
-                <th colspan="3">Persistent</th>
-                <td rowspan="4">2017-10-19 15:11:17.767955</td>
-                <td rowspan="4">2017-10-19 15:11:17.767955</td>
-                <td rowspan="4">1</td>
-                <th>Public Address</th>
-                <th>Name</th>
-                <th>Rank</th>
-                <th>Address</th>
-                <td rowspan="4">1845fe1b-68d1-4c7e-b30b-bacc9961e197</td>
-                <th colspan="3">Group</th>
-                <th colspan="3">Group</th>
-                <th colspan="3">Group</th>
-            </tr>
-
-            <tr>
-                <td>Luminous</td>
-                <td>Luminous</td>
-                <td>Kraken</td>
-                <td rowspan="3">127.0.0.1:40000/0</td>
-                <td rowspan="3">a</td>
-                <td rowspan="3">0</td>
-                <td rowspan="3">127.0.0.1:40000/0"</td>
-                <th>Release</th>
-                <th>Num</th>
-                <th>Features</th>
-                <th>Relaease</th>
-                <th>Num</th>
-                <th>Features</th>
-                <th>Release</th>
-                <th>Num</th>
-                <th>Features</th>
-
-            </tr>
-
-            <tr>
-                <td rowspan="2">Mimic</td>
-                <td rowspan="2">Mimic</td>
-                <td>Luminous</td>
-                <td>Luminous</td>
-                <td>3</td>
-                <td rowspan="2">0x1ffddff8fea4fffb</td>
-                <td>Luminous</td>
-                <td>1</td>
-                <td rowspan="2">0x1ffddff8fea4fffb</td>
-                <td>Lumninous</td>
-                <td>3</td>
-                <td rowspan="2">0x1ffddff8fea4fffb</td>
-
-            </tr>
-
-            <tr>
-                <td>Mimic</td>
-            </tr>
-
-            </tbody>
-
-
-            </table>
-
-
-
-
+    <div style="display: flex;">General<hr style="width: 90vw; margin-left: 0; margin-right: 0"></div>
+    <div class="cardview">
+        <div class="card">
+            <div class="card-header">Name</div>
+            <div class="card-main">
+                <i class="fa-2x fa fa-tag" aria-hidden="true"></i>
+                <div class="main-description">a</div>
+            </div>
         </div>
-    </div>
 
+        <div class="card">
+            <div class="card-header">Rank</div>
+            <div class="card-main">
+                <i class="fa fa-trophy fa-2x" aria-hidden="true"></i>
+                <div class="main-description">0</div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 9vw">
+            <div class="card-header">Election Epoch</div>
+            <div class="card-main">
+                <i class="fa fa-calendar-o fa-2x" aria-hidden="true"></i>
+                <div class="main-description">3</div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 6vw">
+            <div class="card-header">State</div>
+            <div class="card-main">
+                <i class="fa fa-university fa-2x" aria-hidden="true"></i>
+                <div class="main-description">Leader</div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 11vw">
+            <div class="card-header">Extra Probe Peers</div>
+            <div class="card-main">
+                <i class="fa fa-caret-square-o-down fa-2x" aria-hidden="true"></i>
+                <div class="main-description">None</div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 6vw">
+            <div class="card-header">Quorum</div>
+            <div class="card-main">
+                <i class="fa fa-superpowers fa-2x" aria-hidden="true"></i>
+                <div class="main-description">0</div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 9vw">
+            <div class="card-header">Sync Provider</div>
+            <div class="card-main">
+                <i class="fa fa-refresh fa-2x" aria-hidden="true"></i>
+                <div class="main-description">0</div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 11vw">
+            <div class="card-header">Outside Quorum</div>
+            <div class="card-main">
+                <i class="fa fa-outdent fa-2x" aria-hidden="true"></i>
+                <div class="main-description">0</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="subcolsview">
+        <div class="subcols">
+            <div style="display: flex;">Features<hr style="width: 17vw; margin-left: 0; margin-right: 0"></div>
+            <div class="cardview-features">
+                <div class="card" style="width: 17vw">
+                    <div class="card-header">Features</div>
+                    <div class="card-main">
+                        <i class="fa fa-puzzle-piece fa-3x" aria-hidden="true"></i>
+                        <div class="rows main-description">
+                                <div class="faction">
+                                    <b>quorum_con</b><br>
+                                    230524<br>
+                                    484480<br>
+                                    671739
+                                </div>
+                                <div class="faction">
+                                    <b>required_con</b><br>
+                                    153140<br>
+                                    804420<br>
+                                    911104
+                                </div>
+                        </div>
+                        <div class="rows main-description">
+                                <div class="faction">
+                                    <b>quorum_mon</b><br>
+                                    Kraken<br>
+                                    Luminous<br>
+                                    Mimic
+                                </div>
+                                <div class="faction">
+                                    <b>required_mon</b><br>
+                                    Kraken<br>
+                                    Luminous<br>
+                                    Mimic
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subcols">
+            <div style="display: flex;">Feature Map<hr style="width: 67vw; margin-left: 0; margin-right: 0;"></div>
+            <div class="cardview-features">
+                <div class="card" style="width: 20vw">
+                    <div class="card-header">Client</div>
+                    <div class="card-main">
+                        <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i>
+                        <div class="rows main-description">
+                            <div class="faction">
+                                <b>Release</b><br>
+                                Luminous<br>
+                            </div>
+                            <div class="faction">
+                                <b>Num</b><br>
+                                3
+                            </div>
+                            <div class="faction">
+                                <b>Features</b><br>
+                                0x1ffddff8fea4fffb
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 20vw">
+                    <div class="card-header">Monitor</div>
+                    <div class="card-main">
+                        <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i>
+                        <div class="rows main-description">
+                            <div class="faction">
+                                <b>Release</b><br>
+                                Luminous<br>
+                            </div>
+                            <div class="faction">
+                                <b>Num</b><br>
+                                1
+                            </div>
+                            <div class="faction">
+                                <b>Features</b><br>
+                                0x1ffddff8fea4fffb
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardview-features">
+                <div class="card" style="width: 20vw">
+                    <div class="card-header">OSD</div>
+                    <div class="card-main">
+                        <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i>
+                        <div class="rows main-description">
+                            <div class="faction">
+                                <b>Release</b><br>
+                                Luminous<br>
+                            </div>
+                            <div class="faction">
+                                <b>Num</b><br>
+                                3
+                            </div>
+                            <div class="faction">
+                                <b>Features</b><br>
+                                0x1ffddff8fea4fffb
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
 
 </section>
 <!-- /.content -->

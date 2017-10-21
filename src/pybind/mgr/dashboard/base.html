@@ -159,6 +159,11 @@
       <link rel="icon" href="{{ url_prefix }}/static/favicon.ico">
 
     <style>
+
+        .content-subheader {
+            margin-left: 3vw;
+        }
+
         div.box {
             background-color: #222d32;
             color: #fff;
@@ -287,7 +292,56 @@
             background-color: #424d52;
             color: #eee;
         }
-
+        .card {
+            margin: 1vw 2vw;
+            width: 5vw;
+            border: 0.1vw solid #bbbbbb;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all .2s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-header {
+            color: #777;
+            text-align: center;
+            font-size: 2vh;
+            font-weight: 600;
+            border-bottom: 0.1vw solid #bbbbbb;
+            background-color: #eeeeee;
+            padding: 0;
+        }
+        .card-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding:0.5vw 0;
+        }
+        .main-description {
+            color: #fff;
+            font-size: 1.2vw;
+            text-align: center;
+        }
+        .cardview {
+            display: flex;
+        }
+        .cardview-features {
+            display: flex;
+           /* width: 40vw;*/
+        }
+        .rows  {
+            display: flex;
+        }
+        .faction {
+            padding: 5px;
+        }
+        .subcolsview {
+            display: flex;
+        }
     </style>
 
 </head>
